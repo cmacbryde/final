@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<head>
+<meta charset = "utf-8">
+<title> Contact Page </title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+<link rel="stylesheet" type="text/css" href="stylesheet2.css" media="screen" />
+<head>
+    <style>
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+        h1 {
+            text-align: center;
+            color: #812509; //rgb(255, 255, 255);
+            margin-bottom: 30px;
+            font-size: 45px;
+            text-shadow: antiquewhite;
+        }
+        p {
+            color: black;
+            font-size: 20px;
+        }
+		    
+        h2 {
+            text-align: center;
+            color: black;
+        }
+        form {
+            text-align: center;
+        }
+        body {
+			background-color: black;
+        }
+        label {
+            color: black;
+        }
+        table {
+            text-align:center;
+            color: black;
+            width: 50%
+        }
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        table.center {
+          margin-left: auto;
+            margin-right: auto;
+        }
+        input[type="radio"]:hover {
+            cursor: pointer;
+        }
+        input[type="submit"] {
+            background-color: #812509;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-sizing: border-box;
+            margin: 0;
+            vertical-align: top;
+            transition: background-color 0.3s ease;
+        }
+        input[type="submit"]:hover {
+            color: #812509;
+            background-color: #f3d0c6;
+        }
+      textarea {
+            max-width: 420px;
+            max-height: 120px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar">
+    <a href="home.html"><img id="logo" src="logo2.png" alt=""></a>
+    <ul class="nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="gallery.php">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="onlineorder.php">Order Online</a></li>
+        <li><a href="reservations.php">Reservations</a></li>
+    </ul>
+    <ul class="nav-mobile">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="gallery.php">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="onlineorder.php">Order Online</a></li>
+        <li><a href="reservations.php">Reservations</a></li>
+    </ul>
+
+</nav>
+<br/><br/><br/><br/><br/><br><br><br>
+    <div class="container">
+    <h1>CONTACT US</h1>
+    <h2>(917-599-7231)</h2>
+    <form name = "contactForm" onsubmit="return validateForm()">
+        <table class = "center">
+            <tr>
+              <th><label for="firstName">First Name</label></th>
+              <th><label for="lastName">Last Name</label></th>
+              <th><label for="number">Phone Number</label></th>
+            </tr>
+            <tr>
+              <td><input type="text" id = "firstname"></td>
+              <td><input type="text" id = "lastname"><br /></td>
+              <td><input type="text" id = "phonenumber" placeholder="XXX-XXX-XXXX" name="phonenumber" class="phonenumber"></td>
+            </tr>
+        </table>
+        
+	 <p>How much did you enjoy your experience?</p>
+        <input type="radio" id="r1" name="r">
+        <label for="r1">1</label>
+        <input type="radio" id="r2" name="r">
+        <label for="r2">2</label>
+        <input type="radio" id="r3" name="r">
+        <label for="r3">3</label>
+        <input type="radio" id="r4" name="r">
+        <label for="r4">4</label>
+        <input type="radio" id="r5" name="r">
+        <label for="r5">5</label>
+	    
+        <label for="name"><p>Give us Feedback!</p></label>
+        <textarea id = "email" rows = "5" style="height:200px; width:500px; font-size:14pt;"></textarea><br />
+        <br>
+        <input type="submit" name="submit" value = "Submit">
+    <script>
+        
+        function validateForm() {
+            var missingItems = "Missing Items on Form: \n";
+            var phone_length = 0;
+            var phone = document.getElementById("phonenumber").value
+			for (let i = 0; i < phone.length; i++) {
+				if (phone[i] >= 0 && phone[i] <= 9) {
+					phone_length++;
+				}
+			}
+
+            if (document.getElementById("firstname").value == "") {
+                missingItems += "First Name\n"
+            }
+            if (document.getElementById("lastname").value == "") {
+                missingItems += "Last Name\n"
+            }
+            if (phone_length != 10 && phone_length != 11) {
+                missingItems += phone_length;
+                missingItems += "Invalid Phone Number\n"
+            }
+            if (document.getElementById("email").value == "") {
+                missingItems += "Feedback Content\n"
+            }
+            if (missingItems != "Missing Items on Form: \n") {
+                alert(missingItems)
+            } else {
+                alert("Thank you for your feedback, " + document.getElementById("firstname").value)
+            }
+        }
+    </script>
+    </form>
+    </div>
+<br/><br><br>
+<footer class="footer">
+    &copy; 2023 copyright Lisa's Steakhouse
+</footer>
+</body>
+</html>
