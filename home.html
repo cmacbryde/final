@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+    <title>Lisa's Steakhouse</title>
+    <link rel="stylesheet" type="text/css" href="stylesheet2.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="index.js"></script> 
+
+    <!-- google maps API  -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7uABzw3eg_LZ7_woXM2f7FrKC9QecCe0&callback=initMap"></script>
+    <script type="module" src="./map.js"></script>
+
+</head>
+<style>
+    table {
+        text-align:center;
+        color: rgb(15, 15, 15);
+        width: 50%
+    }
+    td, th {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 8px;
+    }
+    table.center {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   #map {
+        height: 60%;
+        width: 80%;
+        left: 0;
+        right: 0;
+        margin: auto;
+        position: absolute;
+    }
+</style>
+<body>
+<nav class="navbar">
+    <a href="home.html"><img id="logo" src="logo2.png" alt=""></a>
+    <ul class="nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="gallery.php">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="onlineorder.php">Order Online</a></li>
+        <li><a href="reservations.php">Reservations</a></li>
+    </ul>
+    <ul class="nav-mobile">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="gallery.php">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="onlineorder.php">Order Online</a></li>
+        <li><a href="reservations.php">Reservations</a></li>
+    </ul>
+
+</nav>
+<br/><br/><br/>
+
+
+<div class="bg-img">
+    <img id="steak" src="steakpicture.jpeg" alt="steak">
+    <h2 class="text">Best Steakhouse in Town</h2>
+    <button id="gallery-btn" onclick="window.location.href='reservations.php'">Reserve now</button>
+</div>
+
+<section class="sect1">
+    <h1 id="welcome">Welcome to Lisa's Steakhouse</h1>
+    <p id="welcome-msg">At Lisa's, we believe that a great steak starts with high-quality ingredients
+        and expert preparation. That's why we source the finest cuts of beef and prepare
+        them with care to ensure that every bite is tender, juicy, and
+        bursting with flavor. But our steak isn't the only thing that sets us apart.
+        Our warm and inviting atmosphere, attentive service, and commitment to quality
+        have made us a favorite destination for steak lovers and foodies alike. Whether
+        you're celebrating a special occasion or just looking for a great meal, we invite
+        you to join us at Lisa's Steakhouse. Browse our menu, make a reservation, or
+        contact us with any questions. We can't wait to serve you!</p>
+    <div id="hours">
+        <h2>Opening Hours</h2>
+        <p>Daily: 11am-10pm</p>
+        <br/><br/>
+        <h2>Locations</h2>
+        <p>Seattle, WA</p>
+        <p>Medford, MA</p>
+        <p>Danville, CA</p>
+        <button id="location-btn" onclick="window.location.href='locations.html'">More locations</button>
+    </div>
+</section>
+<br/><br/>
+
+<div class="row">
+    <div class="column">
+       <a href="steak2.jpg" target="_blank"><img src="steak2.jpg" class="display"></a>
+    </div>
+    <div class="column">
+        <a href="ribs2.jpg" target="_blank"><img src="ribs2.jpg" class="display"></a>
+    </div>
+    <div class="column">
+        <a href="filet.jpeg" target="_blank"><img src="filet.jpeg" style="height: 88%" class="display"></a>
+    </div>
+    <div class="column">
+        <a href="sirloin2.jpg" target="_blank"><img src="sirloin2.jpg" class="display"></a>
+    </div>
+</div>
+
+<br><br>
+
+<h1 style="text-align: center">Our Locations</h1>
+<div id="map"></div>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+<footer class="footer">
+    &copy; 2023 copyright Lisa's Steakhouse
+</footer>
+</body>
+</html>
