@@ -1,0 +1,256 @@
+<html>
+    <head>
+        <style>
+            body {background-color: #white;}
+            /* div.locations{ background-color: #f2f2f2; display: table; margin: 10px auto 10px auto; padding-left:300px; padding-right:300px; padding-top: 50px; padding-bottom: 50px; border-radius: 10px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);} */
+            /* .logo {max-width:16%; height:auto; padding: 20px;} */
+            h1 { text-align: center; color: black; margin-bottom: 30px; font-size: 45px;}
+            /* h1 {color : #000000; font-family:georgia,times; text-align:center; padding-top: 20px; padding-bottom: 25px; border-bottom: 1px solid #9f8462} */
+            h6 {color : #black; text-align:center; font-size: 30px; font-weight: bold; padding: 0px; margin: 0px;}
+            p {color : #black; text-align:center; font-size: 20px; font-weight: bold; font-style: italic; padding: 5px; margin: 0px;}
+            hr.dotted {border-top: 0.5px dotted #812509;}
+            @media (max-width: 1150px)
+            {
+                ul.nav li {padding: 0 10px; text-decoration:none;}
+                div.locations{padding-left:100px; padding-right:100px;}
+            }
+
+            @media (max-width: 700px)
+            {
+                ul.nav li {padding: 0 10px;  text-decoration:none;}
+                ul.nav a {font-size: 18;}
+                h1 {font-size: 24px;}
+                h6 {font-size: 24px;}
+                p {font-size: 16;}
+                div.locations{padding-left:50px; padding-right:50px;}
+            }
+            .footer { position: fixed; left: 0; bottom: 0; width: 100%; background-color: #49341f; padding-top: 20px; padding-bottom: 20px; text-align: center;}
+            #map {height: 60%; width: 80%; left: 0; right: 0; margin: auto; position: absolute; padding: 20px; display: block;}
+            .subNav {
+                text-align: center;
+                text-decoration: none;
+                color: black;
+                font-size: 20pt;
+            }
+            .subNav a {
+                color: black;
+                text-decoration: none;
+            }
+            .subNav a:hover {
+                cursor: pointer;
+                color: #812509;
+            }
+            input[type="submit"] {
+                background-color: #812509;
+                color: #fff;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                box-sizing: border-box;
+                margin: 0;
+                vertical-align: top;
+                transition: background-color 0.3s ease;
+                display: inline-block;
+            }
+
+            input[type="submit"]:hover {
+                color: #812509;
+                background-color: #f3d0c6;
+            }
+
+            .inline {display: inline-block;}
+            .center {margin: auto; text-align: center; padding-bottom: 20px;}
+            .after_map {display: block;}
+
+
+        </style>
+        <title>Locations</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet2.css" media="screen" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">
+
+         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA7uABzw3eg_LZ7_woXM2f7FrKC9QecCe0&callback=initMap"></script>
+        <script type="module" src="./map.js"></script>
+    </head>
+    <body >
+    <nav class="navbar">
+        <a href="home.html"><img id="logo" src="logo2.png" alt=""></a>
+        <ul class="nav">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="gallery.php">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="onlineorder.php">Order Online</a></li>
+        <li><a href="reservations.php">Reservations</a></li>
+    </ul>
+    <ul class="nav-mobile">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="menu.php">Menu</a></li>
+        <li><a href="gallery.php">Gallery</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="locations.html">Locations</a></li>
+        <li><a href="onlineorder.php">Order Online</a></li>
+        <li><a href="reservations.php">Reservations</a></li>
+    </ul>
+
+    </nav>
+    <br/><br/><br/><br/><br/><br/><br/>
+        <!-- <img src="logo2.png" alt="logo" class="logo"> -->
+        <!-- <ul class='nav'>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="locations.html">Locations</a></li>
+            <li><a href="order_online.html">Order Online</a></li>
+        </ul> -->
+        <div class="locations">
+
+            <h1>LOCATIONS</h1>
+            <nav class = "subNav">
+            <a href= "#Seattle">Seattle | </a><a href ="#Medford">Medford | </a><a href ="#Danville">Danville | </a><a href ="#Los">Los Altos | </a><a href ="#Kuala">Kuala Lumpur</a><br /><br />
+            </nav>
+            <div id="map"></div>
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+            <section id="Seattle">
+            <br><br><br><br><br><br><br><br><br><br>
+            <div class='after_map'>
+            
+            <h6>Seattle, WA</h6>
+            </section>
+            <section id="Medford">
+            <p>Address: 1400 NE Campus Parkway, Seattle, WA</p>
+            <p>Phone: (206) 000-0000</p>
+            <p>Hours: 11-10 daily</p>
+            
+            <div class='center'>
+                <div class='inline'>
+                    <form class='reservation_form' action='reservations.php' method='post' onsubmit='return true'
+                    <a href="reservations.php">
+                    <input type="submit" value = "Make a Reservation"/>
+                    </a>
+                    </form>
+                </div>
+                
+                <div class='inline'>
+                    <form class='menu_form' action='menu.php' method='post' onsubmit='return true'
+                    <a href="menu.php">
+                    <input type="submit" value = "See Menu"/>
+                    </a>
+                    </form>
+                </div>
+            </div>
+            
+            
+            <!-- <hr class="dotted"> -->
+            
+            <h6>Medford, MA</h6>
+            </section>
+            <section id="Danville">
+            <p>Address: 419 Boston Ave, Medford, MA</p>
+            <p>Phone: (617) 627-5000</p>
+            <p>Hours: 11-10 daily</p>
+            <div class='center'>
+                <div class='inline'>
+                    <form class='reservation_form' action='reservations.php' method='post' onsubmit='return true'
+                    <a href="reservations.php">
+                    <input type="submit" value = "Make a Reservation"/>
+                    </a>
+                    </form>
+                </div>
+                
+                <div class='inline'>
+                    <form class='menu_form' action='menu.php' method='post' onsubmit='return true'
+                    <a href="menu.php">
+                    <input type="submit" value = "See Menu"/>
+                    </a>
+                    </form>
+                </div>
+            </div>
+            
+            <h6>Danville, CA</h6>
+            </section>
+            <section id="Los">
+            <p>Address: 501 Danville Blvd, Danville, CA</p>
+            <p>Phone: (925) 552-3000</p>
+            <p>Hours: 11-10 daily</p>
+            <div class='center'>
+                <div class='inline'>
+                    <form class='reservation_form' action='reservations.php' method='post' onsubmit='return true'
+                    <a href="reservations.php">
+                    <input type="submit" value = "Make a Reservation"/>
+                    </a>
+                    </form>
+                </div>
+                
+                <div class='inline'>
+                    <form class='menu_form' action='menu.php' method='post' onsubmit='return true'
+                    <a href="menu.php">
+                    <input type="submit" value = "See Menu"/>
+                    </a>
+                    </form>
+                </div>
+            </div>
+            
+            <h6>Los Altos, CA</h6>
+            </section>
+            <section id="Kuala">
+            <p>Address: 327 Fremont Ave, Los Altos, CA</p>
+            <p>Phone: (650) 209-3030</p>
+            <p>Hours: 11-10 daily</p>
+            <div class='center'>
+                <div class='inline'>
+                    <form class='reservation_form' action='reservations.php' method='post' onsubmit='return true'
+                    <a href="reservations.php">
+                    <input type="submit" value = "Make a Reservation"/>
+                    </a>
+                    </form>
+                </div>
+                
+                <div class='inline'>
+                    <form class='menu_form' action='menu.php' method='post' onsubmit='return true'
+                    <a href="menu.php">
+                    <input type="submit" value = "See Menu"/>
+                    </a>
+                    </form>
+                </div>
+            </div>
+            
+            <h6>Kuala Lumpur, Malaysia</h6>
+            <p>Address:  64000 Sepang, Kuala Lumpur, Malaysia</p>
+            <p>Phone: +60 3-8776 2000</p>
+            <p>Hours: 11-10 daily</p>
+            <div class='center'>
+                <div class='inline'>
+                    <form class='reservation_form' action='reservations.php' method='post' onsubmit='return true'
+                    <a href="reservations.php">
+                    <input type="submit" value = "Make a Reservation"/>
+                    </a>
+                    </form>
+                </div>
+                
+                <div class='inline'>
+                    <form class='menu_form' action='menu.php' method='post' onsubmit='return true'
+                    <a href="menu.php">
+                    <input type="submit" value = "See Menu"/>
+                    </a>
+                    </form>
+                </div>
+            </div>
+            </section>
+        </div>
+        </br>
+        </br>
+        </div>
+
+        
+        
+        <br><br><br><br><br><br>
+
+        <!-- <div class="footer">
+            <a>Seattle hours: 6-3 daily &emsp; Boston hours: 6-4 daily</a>
+        </div> -->
+    <footer class="footer">
+        &copy; 2023 copyright Lisa's Steakhouse
+    </footer>
+    </body>
+</html>
